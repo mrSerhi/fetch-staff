@@ -32,10 +32,10 @@
         const usersNode = document.getElementById("users");
         obj.forEach(user => {
           usersNode.innerHTML += `
-                <ul>
-                    <li>ID: ${user.id}</li>
-                    <li>Name: ${user.name}</li>
-                    <li>Email: ${user.email}</li>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item">ID: ${user.id}</li>
+                    <li class="list-group-item">Name: ${user.name}</li>
+                    <li class="list-group-item">Email: ${user.email}</li>
                 </ul>
                 `;
         });
@@ -54,7 +54,7 @@
         }
         data.forEach(mess => {
           messNode.innerHTML += `
-            <div>
+            <div class="card card-body mb-3">
                 <h2>${mess.title}</h2>
                 <p>${mess.body}</p>
             </div>

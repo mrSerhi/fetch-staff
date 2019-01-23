@@ -5,32 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Fetch</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <button type="button" id="getText">Get text</button>
-    <button id="getUsers">get users</button>
-    <button id="getPosts">get posts</button>
-    <p id="displayMessage"></p>
-    <div id="users"></div>
-    <div id="mess"></div>
-    <form id="addPost">
-      <div>
-        <label for="title">
-          <input type="text" id="title" placeholder="title" />
-        </label>
+    <div class="container">
+      <h1 class="display-4 mb-4">Fetch API sendBOx</h1>
+      <div class="d-flex">
+        <button class="btn btn-primary mr-4" id="getText">Get text</button>
+        <button class="btn btn-success mr-4" id="getUsers">get users</button>
+        <button class="btn btn-warning mr-4" id="getPosts">get posts</button>
       </div>
-      <div>
-        <label for="body">
+      <p id="displayMessage"></p>
+      <div id="users"></div>
+      <div id="mess"></div>
+      <hr />
+      <form id="addPost">
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            id="title"
+            placeholder="title"
+          />
+        </div>
+        <div class="form-group">
           <textarea
-            cols="40"
-            rows="10"
+            class="form-control"
             id="body"
             placeholder="message"
           ></textarea>
-        </label>
-      </div>
-      <input type="submit" value="Submit" />
-    </form>
+        </div>
+        <input class="btn btn-secondary" type="submit" value="Submit" />
+      </form>
+    </div>
 
     <script src="./src/js/get-text.js" defer></script>
   </body>
